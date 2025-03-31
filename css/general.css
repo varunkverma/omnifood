@@ -37,6 +37,7 @@
     
     Greys:
         #888
+        #767676 (lighest grey allowed on #fff)
         #6f6f6f (lighest grey allowed on #fdf2e9)
         #555
         #333
@@ -89,8 +90,6 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
-
-  /* margin-bottom: 9.6rem; */
 }
 
 /* .grid:last-child {
@@ -109,6 +108,9 @@ body {
 }
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
