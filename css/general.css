@@ -69,6 +69,8 @@ html {
   /* % of user's browser font-size setting. Default is 16px*/
   font-size: 62.5%;
   overflow-x: hidden;
+  /* scroll-behavior doesn't work on Safari and edge */
+  /* scroll-behavior: smooth; */
 }
 
 body {
