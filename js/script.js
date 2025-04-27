@@ -56,7 +56,28 @@ allLinks.forEach((linkEl) => {
   });
 });
 
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+// https://unpkg.com /smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+// making nav sticy when crosses hero section
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    } else {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // in the viewport
+    root: null,
+    threshold: 0, // as soon as 0% if left in the viewport,
+    rootMargin: "-80px", // has to be px
+  }
+);
+obs.observe(sectionHeroEl);
 
 /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
